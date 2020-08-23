@@ -3,7 +3,7 @@
 
 int main()
 {
-  int T,i,count;
+  int T,i,count,temp;
   int n[500];
   scanf("%d",&T);
   for(i=0;i<T;i++)
@@ -18,6 +18,11 @@ int main()
      if(n[i]>=n[i+1])
      {
         count=count+1;
+     }
+     else{
+      temp=n[i];
+      n[i]=n[i+1];
+      n[i+1]=temp;
      }
    }
    printf("%d",count);
